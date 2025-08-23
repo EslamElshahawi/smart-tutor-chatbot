@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tutor - Your Learning Friend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>Smart Tutor</h1>
+            </div>
+            <p class="tagline">Your Learning Friend! 🎓✨</p>
+        </header>
+
+        <!-- Cluster Selection -->
+        <div class="cluster-selection" id="clusterSelection">
+            <h2>Choose Your Learning Style:</h2>
+            <div class="cluster-grid">
+                <div class="cluster-card" data-cluster="0">
+                    <div class="cluster-icon">🐢</div>
+                    <h3>Cluster 0</h3>
+                    <p>Persistent but Ineffective</p>
+                    <small>You try hard but need extra help</small>
+                </div>
+                <div class="cluster-card" data-cluster="1">
+                    <div class="cluster-icon">🚀</div>
+                    <h3>Cluster 1</h3>
+                    <p>Engaged & High-Achieving</p>
+                    <small>You do well but like challenges</small>
+                </div>
+                <div class="cluster-card" data-cluster="2">
+                    <div class="cluster-icon">🦅</div>
+                    <h3>Cluster 2</h3>
+                    <p>Independent</p>
+                    <small>You prefer solving problems alone</small>
+                </div>
+                <div class="cluster-card" data-cluster="3">
+                    <div class="cluster-icon">🌟</div>
+                    <h3>Cluster 3</h3>
+                    <p>Proactive & Coachable</p>
+                    <small>You learn well from hints</small>
+                </div>
+            </div>
+            <button class="start-btn" id="startBtn" disabled>Start Learning!</button>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="chat-interface" id="chatInterface" style="display: none;">
+            <div class="chat-header">
+                <h3>Chat with Your Tutor</h3>
+                <div class="cluster-badge" id="clusterBadge"></div>
+                <button class="new-session-btn" id="newSessionBtn">
+                    <i class="fas fa-plus"></i> New Session
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added here -->
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-container">
+                    <input type="text" id="messageInput" placeholder="Type your question here..." maxlength="500">
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Message -->
+        <div class="welcome-message" id="welcomeMessage">
+            <div class="welcome-content">
+                <h2>Welcome to Smart Tutor! 🎉</h2>
+                <p>I'm here to help you learn in a fun and exciting way!</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Smart hints that guide you to answers</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <span>Encouraging and patient support</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <span>Personalized learning experience</span>
+                    </div>
+                </div>
+                <p class="instruction">Choose your learning style above to get started!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
