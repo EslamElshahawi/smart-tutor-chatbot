@@ -53,7 +53,7 @@ SECRET_KEY=your_secret_key_here
 python app.py
 ```
 
-The app will be available at `http://localhost:5000`
+The app will be available at `http://localhost:5001`
 
 ## Project Structure
 
