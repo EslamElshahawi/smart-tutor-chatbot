@@ -97,7 +97,7 @@ def start_session():
     initial_message = cluster_info + "I'm ready to learn!"
     
     # Start chat session
-    chat = genai.GenerativeModel('gemini-1.5-flash').start_chat(history=[
+    chat = genai.GenerativeModel('gemini-2.0-flash-exp').start_chat(history=[
         {"role": "user", "parts": [SYSTEM_PROMPT]},
         {"role": "model", "parts": ["I understand my role. I am ready to begin."]},
         {"role": "user", "parts": [initial_message]},
